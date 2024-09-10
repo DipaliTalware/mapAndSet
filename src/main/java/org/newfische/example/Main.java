@@ -28,11 +28,11 @@ public class Main {
         System.out.println();
         System.out.println("Task 2");
 
-//Phamacy Task
+//Pharmacy Task
         /* creating medication  */
         Medication paracetamol = new Medication("Paracetamol", 5, true);
         Medication ibuprofen = new Medication("Ibuprofen", 6, true);
-        Medication amoxicillin = new Medication("Amoxicillin ", 10, true);
+        Medication amoxicillin = new Medication("Amoxicillin", 10, true);
         Medication atorvastatin = new Medication("Atorvastatin ", 20, true);
 
         Pharmacy hansaApotheke = new Pharmacy();
@@ -51,16 +51,18 @@ public class Main {
         /* finding medication in the Pharmacy */
         Medication findmedication = hansaApotheke.find("Paracetamol");
         if (findmedication != null) {
-            System.out.println("Found medication: "+ findmedication);
-        } else System.out.println("No medication found");
+            System.out.println("Found medication: " + findmedication);
+        } else {
+            System.out.println("No medication found");
+        }
         System.out.println();
 
         /* getting the medication Count in the Pharmacy */
-        System.out.println("Total medication Count is:"+ hansaApotheke.getCount());
+        System.out.println("Total medication Count is:" + hansaApotheke.getCount());
         System.out.println();
 
         /* deleting medication from the Pharmacy */
-        hansaApotheke.delete("amoxicillin");
+        hansaApotheke.delete(atorvastatin.getName());
 
         /* Printing all medication */
         hansaApotheke.printAllMedication();
